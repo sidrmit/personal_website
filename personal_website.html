@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background: #444;
+            color: #fff;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .gallery-section {
+            padding: 2rem;
+            text-align: center;
+        }
+        .gallery-section h2 {
+            margin-bottom: 1rem;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .gallery img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to My Personal Website</h1>
+</header>
+
+<nav>
+    <a href="#about">About Me</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about" class="gallery-section">
+    <h2>About Me</h2>
+    <p>Hello! I'm a professional with interests in photography, writing, and music. This website showcases my work and passions. Explore my gallery below!</p>
+</section>
+
+<section id="gallery" class="gallery-section">
+    <h2>Photo Gallery</h2>
+    <h3>Of Me</h3>
+    <div class="gallery">
+        <img src="gallery_me_1.jpg" alt="Of Me Photo 1">
+        <img src="gallery_me_2.jpg" alt="Of Me Photo 2">
+    </div>
+    <h3>By Me</h3>
+    <div class="gallery">
+        <!-- Placeholder for photos you upload -->
+        <p>Your creative photography will be displayed here!</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 My Personal Website</p>
+</footer>
+
+</body>
+</html>
