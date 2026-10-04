@@ -66,6 +66,23 @@
         </figure>`).join("");
       gallerySection.hidden = false;
     }
+    const visitSection = document.querySelector("[data-visit-map]");
+    if (visitSection && side.visitedPlaces?.length) {
+      const validPlaces = side.visitedPlaces.filter((place) =>
+        Number.isFinite(Number(place.lat)) && Number.isFinite(Number(place.lon))
+      );
+      const mapPins = visitSection.querySelector("[data-map-pins]");
+      const placeList = visitSection.querySelector("[data-place-list]");
+      const markerHTML = validPlaces.map((place) => {
+        const x = Math.max(0, Math.min(100, ((Number(place.lon) + 180) / 360) * 100));
+        const y = Math.max(0, Math.min(100, ((90 - Number(place.lat)) / 150) * 100));
+        return `<span class="map-pin" style="left:${x.toFixed(3)}%;top:${y.toFixed(3)}%"></span>`;
+      }).join("");
+      mapPins.innerHTML = markerHTML;
+      placeList.innerHTML = validPlaces.map((place) => `
+        <li><span class="place-pin" aria-hidden="true"></span><span><b>${escapeHTML(place.city)}</b><small>${escapeHTML(place.country)}</small></span></li>`).join("");
+      if (validPlaces.length) visitSection.hidden = false;
+    }
     const nextIndex = (content.sides.findIndex((entry) => entry.slug === side.slug) + 1) % content.sides.length;
     const next = content.sides[nextIndex];
     const nextLink = document.querySelector("[data-next-side]");
