@@ -56,6 +56,16 @@
         <li><a href="${escapeHTML(paper.url)}" target="_blank" rel="noopener noreferrer"><span>${escapeHTML(paper.title)}</span><small>${escapeHTML(paper.venue)}</small><b aria-hidden="true">↗</b></a></li>`).join("");
       publicationList.hidden = false;
     }
+    const gallerySection = document.querySelector("[data-side-gallery]");
+    if (gallerySection && side.gallery?.length) {
+      const photoGrid = gallerySection.querySelector("[data-photo-grid]");
+      photoGrid.innerHTML = side.gallery.map((photo) => `
+        <figure class="photo-card">
+          <img src="${escapeHTML(photo.src)}" alt="${escapeHTML(photo.alt)}" loading="lazy" decoding="async">
+          <figcaption>${escapeHTML(photo.caption)}</figcaption>
+        </figure>`).join("");
+      gallerySection.hidden = false;
+    }
     const nextIndex = (content.sides.findIndex((entry) => entry.slug === side.slug) + 1) % content.sides.length;
     const next = content.sides[nextIndex];
     const nextLink = document.querySelector("[data-next-side]");
@@ -70,4 +80,3 @@
     return String(value).replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" })[character]);
   }
 })();
-
