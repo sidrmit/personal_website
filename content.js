@@ -1,8 +1,8 @@
-/* Personal site content, drawn from Siddhartha's public profiles and publication records. */
+/* Personal site content. */
 window.SITE_CONTENT = {
   name: "Siddhartha Siddhiprada Bhoi",
-  intro: "I’m Siddhartha. I move between cryptography, photography, writing, and music.",
-  about: "I’m Siddhartha Siddhiprada Bhoi, an applied cryptographer and researcher. Alongside my research, photography, writing, and music each have a place in my life.",
+  intro: "I’m Siddhartha Siddhiprada Bhoi. My work is in applied cryptography; my camera keeps a record of the world beyond the page.",
+  about: "I’m Siddhartha Siddhiprada Bhoi, an applied cryptography researcher. My publications explore post-quantum security, homomorphic encryption, and coding theory. Away from the papers, I keep photos of trains, open skies, and evenings I want to remember.",
   profiles: {
     scholar: "https://scholar.google.com/citations?user=NwAXXOwAAAAJ&hl=en",
     linkedin: "https://www.linkedin.com/in/siddhartha-siddhiprada-bhoi-842861a0/"
@@ -32,22 +32,25 @@ window.SITE_CONTENT = {
       subtitle: "A camera, a point of view, and a reason to pause.",
       note: "Photos and the stories behind them.", color: "blue", symbol: "◉",
       detail: "Photography is one way I pay attention to the world around me. This page is a place for the images I choose to share and the moments behind them.",
+      galleryHeading: "From behind the camera",
+      galleryIntro: "Two frames from October and November 2018.",
       gallery: [
         { src: "assets/photos/rail-at-dusk.jpg", alt: "Railway tracks beside a passenger train at sunset.", caption: "Railway at dusk · 27 October 2018" },
         { src: "assets/photos/campus-at-dusk.jpg", alt: "An open field beneath evening clouds and shafts of sunlight.", caption: "Evening light · 1 November 2018" }
       ]
     },
     {
-      slug: "writing", number: "04", name: "The writer",
-      subtitle: "Ideas and observations, gathered in words.",
-      note: "Essays, notes, and works in progress.", color: "green", symbol: "¶",
-      detail: "Writing gives ideas room to breathe. This page is for essays, notes, and other things I want to put into words."
-    },
-    {
-      slug: "music", number: "05", name: "The music lover",
-      subtitle: "Soundtracks for work, travel, and quiet hours.",
-      note: "Artists, records, and sounds I return to.", color: "pink", symbol: "♫",
-      detail: "Music runs alongside everything else. This page is for the artists, records, and sounds I keep coming back to."
+      slug: "travel", number: "04", name: "Travel diaries",
+      subtitle: "Train windows, evening skies, and moments worth keeping.",
+      note: "Photos from the road and places along the way.", color: "orange", symbol: "↗",
+      detail: "A small beginning to my travel diaries: two photographs from October and November 2018. One looks out alongside a train at sunset; the other keeps an evening sky over an open field.",
+      galleryHeading: "Scenes along the way",
+      galleryIntro: "Two moments I kept from 2018.",
+      gallery: [
+        { src: "assets/photos/rail-at-dusk.jpg", alt: "A passenger train and railway tracks beneath a glowing sunset.", caption: "Train window · 27 October 2018" },
+        { src: "assets/photos/campus-at-dusk.jpg", alt: "Evening sunlight falling across an open field.", caption: "Last light over the field · 1 November 2018" }
+      ],
+      visitedPlaces: []
     }
   ]
 };

@@ -8,7 +8,7 @@
     const profile = content.profiles[el.dataset.link];
     if (profile) el.href = profile;
   });
-  document.title = `All of ${content.name} — a personal site`;
+  document.title = `${content.name} — Research, photographs, and travel diaries`;
 
   const grid = document.querySelector("#side-grid");
   if (grid) {
@@ -59,6 +59,12 @@
     const gallerySection = document.querySelector("[data-side-gallery]");
     if (gallerySection && side.gallery?.length) {
       const photoGrid = gallerySection.querySelector("[data-photo-grid]");
+      const galleryHeading = gallerySection.querySelector("[data-gallery-heading]");
+      const galleryIntro = gallerySection.querySelector("[data-gallery-intro]");
+      const galleryEyebrow = gallerySection.querySelector("[data-gallery-eyebrow]");
+      if (galleryHeading && side.galleryHeading) galleryHeading.textContent = side.galleryHeading;
+      if (galleryIntro && side.galleryIntro) galleryIntro.textContent = side.galleryIntro;
+      if (galleryEyebrow && side.slug === "travel") galleryEyebrow.textContent = "TRAVEL DIARY · OCT—NOV 2018";
       photoGrid.innerHTML = side.gallery.map((photo) => `
         <figure class="photo-card">
           <img src="${escapeHTML(photo.src)}" alt="${escapeHTML(photo.alt)}" loading="lazy" decoding="async">
