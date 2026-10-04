@@ -5,7 +5,8 @@ window.SITE_CONTENT = {
   about: "I’m Siddhartha Siddhiprada Bhoi, an applied cryptographer and researcher. Alongside my research, photography, writing, and music each have a place in my life.",
   profiles: {
     scholar: "https://scholar.google.com/citations?user=NwAXXOwAAAAJ&hl=en",
-    linkedin: "https://www.linkedin.com/in/siddhartha-siddhiprada-bhoi-842861a0/"
+    linkedin: "https://www.linkedin.com/in/siddhartha-siddhiprada-bhoi-842861a0/",
+    googlePhotos: "https://photos.app.goo.gl/s3jjZBju1nDzSmBW7"
   },
   sides: [
     {
@@ -31,7 +32,8 @@ window.SITE_CONTENT = {
       slug: "photography", number: "03", name: "The photographer",
       subtitle: "A camera, a point of view, and a reason to pause.",
       note: "Photos and the stories behind them.", color: "blue", symbol: "◉",
-      detail: "Photography is one way I pay attention to the world around me. This page is a place for the images I choose to share and the moments behind them."
+      detail: "Photography is one way I pay attention to the world around me. This page is a place for the images I choose to share and the moments behind them.",
+      profileLabel: "View my photo album on Google Photos", profileUrl: "googlePhotos"
     },
     {
       slug: "writing", number: "04", name: "The writer",
