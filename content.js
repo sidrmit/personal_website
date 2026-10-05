@@ -50,6 +50,7 @@ window.SITE_CONTENT = {
         { src: "assets/photos/rail-at-dusk.jpg", alt: "A passenger train and railway tracks beneath a glowing sunset.", caption: "Train window · 27 October 2018" },
         { src: "assets/photos/campus-at-dusk.jpg", alt: "Evening sunlight falling across an open field.", caption: "Last light over the field · 1 November 2018" }
       ],
+      showVisitMap: true,
       visitedPlaces: []
     }
   ]
