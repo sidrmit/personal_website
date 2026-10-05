@@ -31,16 +31,37 @@ window.SITE_CONTENT = {
       slug: "photography", number: "03", name: "The photographer",
       subtitle: "A camera, a point of view, and a reason to pause.",
       note: "Photos and the stories behind them.", color: "blue", symbol: "◉",
-      detail: "Photography is one way I pay attention to the world around me. This page is a place for the images I choose to share and the moments behind them.",
-      galleryHeading: "From behind the camera",
-      galleryIntro: "Two frames from October and November 2018.",
+      detail: "Photography is one way I pay attention to the world around me. These three frames came from a misty walk in Tasmania, where the path kept bending out of sight.",
+      galleryHeading: "A walk into the mist",
+      galleryIntro: "Three frames from Tasmania, December 2025.",
       gallery: [
-        { src: "assets/photos/rail-at-dusk.jpg", alt: "Railway tracks beside a passenger train at sunset.", caption: "Railway at dusk · 27 October 2018" },
-        { src: "assets/photos/campus-at-dusk.jpg", alt: "An open field beneath evening clouds and shafts of sunlight.", caption: "Evening light · 1 November 2018" }
+        { src: "assets/photos/tasmania-hidden-trail-01.jpg", alt: "A narrow dirt track disappearing into a dense Tasmanian forest.", caption: "The path ahead · Tasmania · 22 December 2025" },
+        { src: "assets/photos/tasmania-hidden-trail-02.jpg", alt: "A stone path beneath a canopy of trees in the mist.", caption: "Beneath the canopy · Tasmania · 22 December 2025" },
+        { src: "assets/photos/tasmania-hidden-trail-03.jpg", alt: "A rocky trail winding through misty trees and scrub.", caption: "The rocky bend · Tasmania · 22 December 2025" }
       ]
     },
     {
-      slug: "travel", number: "04", name: "Travel diaries",
+      slug: "writing", number: "04", name: "The writer",
+      subtitle: "Poems and passing thoughts, gathered between the lines.",
+      note: "Captions that grew into something more.", color: "green", symbol: "✎",
+      detail: "Some captions needed a few more lines than a photograph could hold. These poems came from a walk, a faraway thought, and the feeling of being on the move.",
+      writings: [
+        {
+          title: "The hidden trail", date: "2025-12-22", dateLabel: "22 December 2025", place: "Tasmania, Australia",
+          text: "The sun may dip, the shadows may creep,\nWith miles to go before I sleep.\nBut I will take the jagged bend,\nAnd let the wandering be the end.\n\nFor though the easy path is fast,\nIt’s the hidden trail where memories last.\nI’d rather stumble toward the sun\nThan finish a race I never run."
+        },
+        {
+          title: "In youth’s dark bloom", date: "2025-06-22", dateLabel: "22 June 2025", place: "12 Apostles, Australia",
+          text: "In youth's dark bloom, my spirit yearns,\nFor silver strands where wisdom learns.\nA hurried wish, through decades' flight,\nTo wear the gray, and claim its light......"
+        },
+        {
+          title: "Mera raasta", date: "2025-03-27", dateLabel: "27 March 2025", place: "",
+          text: "Rahon pe chalta musafir hu main,\nNa jane kis ki talash mein hun main,\nWaqt ki tez hawaon se bhagta\nApni hi parchhaiyin se ladhta hun main.\nNa koi thikaana, na koi aasra,\nBas safar hai mera, mera raasta."
+        }
+      ]
+    },
+    {
+      slug: "travel", number: "05", name: "Travel diaries",
       subtitle: "Train windows, evening skies, and moments worth keeping.",
       note: "Photos from the road and places along the way.", color: "orange", symbol: "↗",
       detail: "A small beginning to my travel diaries: two photographs from October and November 2018. One looks out alongside a train at sunset; the other keeps an evening sky over an open field.",
@@ -51,7 +72,11 @@ window.SITE_CONTENT = {
         { src: "assets/photos/campus-at-dusk.jpg", alt: "Evening sunlight falling across an open field.", caption: "Last light over the field · 1 November 2018" }
       ],
       showVisitMap: true,
-      visitedPlaces: []
+      visitedPlaces: [
+        { city: "Tasmania", country: "Australia", lat: -42.0, lon: 147.0 },
+        { city: "12 Apostles", country: "Australia", lat: -38.66, lon: 143.1 }
+      ]
     }
   ]
 };
+

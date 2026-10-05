@@ -8,7 +8,7 @@
     const profile = content.profiles[el.dataset.link];
     if (profile) el.href = profile;
   });
-  document.title = `${content.name} — Research, photographs, and travel diaries`;
+  document.title = `${content.name} — Research, photographs, writing, and travel diaries`;
 
   const grid = document.querySelector("#side-grid");
   if (grid) {
@@ -72,6 +72,17 @@
         </figure>`).join("");
       gallerySection.hidden = false;
     }
+    const writingSection = sideRoot.querySelector("[data-side-writing]");
+    if (writingSection && side.writings?.length) {
+      const writingList = writingSection.querySelector("[data-writing-list]");
+      writingList.innerHTML = side.writings.map((piece) => `
+        <article class="writing-card">
+          <div class="writing-meta"><h3>${escapeHTML(piece.title)}</h3><time datetime="${escapeHTML(piece.date)}">${escapeHTML(piece.dateLabel)}</time></div>
+          ${piece.place ? `<p class="writing-place">${escapeHTML(piece.place)}</p>` : ""}
+          <p class="writing-text">${escapeHTML(piece.text).replace(/\n/g, "<br>")}</p>
+        </article>`).join("");
+      writingSection.hidden = false;
+    }
     const visitSection = document.querySelector("[data-visit-map]");
     const validPlaces = (side.visitedPlaces || []).filter((place) =>
         Number.isFinite(Number(place.lat)) && Number.isFinite(Number(place.lon))
@@ -99,10 +110,11 @@
       nextLink.href = `side.html?side=${escapeHTML(encodeURIComponent(next.slug))}`;
       nextLink.querySelector("[data-next-name]").textContent = next.name;
     }
-    sideRoot.classList.add(`detail-${side.color}`);
+    sideRoot.classList.add(`detail-${side.color}`, `side-${side.slug}`);
   }
 
   function escapeHTML(value) {
     return String(value).replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" })[character]);
   }
 })();
+
