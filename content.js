@@ -31,10 +31,12 @@ window.SITE_CONTENT = {
       slug: "photography", number: "03", name: "The photographer",
       subtitle: "A camera, a point of view, and a reason to pause.",
       note: "Photos and the stories behind them.", color: "blue", symbol: "◉",
-      detail: "Photography is one way I pay attention to the world around me. These three frames came from a misty walk in Tasmania, where the path kept bending out of sight.",
-      galleryHeading: "A walk into the mist",
-      galleryIntro: "Three frames from Tasmania, December 2025.",
+      detail: "Photography is one way I pay attention to the world around me. I keep returning to evening light, railway journeys, and quiet paths that disappear into the trees.",
+      galleryHeading: "Frames I’ve kept",
+      galleryIntro: "From two evenings in 2018 to a misty walk in Tasmania.",
       gallery: [
+        { src: "assets/photos/rail-at-dusk.jpg", alt: "A passenger train and railway tracks beneath a glowing sunset.", caption: "Railway at dusk · 27 October 2018" },
+        { src: "assets/photos/campus-at-dusk.jpg", alt: "An open field beneath evening clouds and shafts of sunlight.", caption: "Evening light · 1 November 2018" },
         { src: "assets/photos/tasmania-hidden-trail-01.jpg", alt: "A narrow dirt track disappearing into a dense Tasmanian forest.", caption: "The path ahead · Tasmania · 22 December 2025" },
         { src: "assets/photos/tasmania-hidden-trail-02.jpg", alt: "A stone path beneath a canopy of trees in the mist.", caption: "Beneath the canopy · Tasmania · 22 December 2025" },
         { src: "assets/photos/tasmania-hidden-trail-03.jpg", alt: "A rocky trail winding through misty trees and scrub.", caption: "The rocky bend · Tasmania · 22 December 2025" }
